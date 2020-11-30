@@ -19,7 +19,7 @@ class MongoConnect():
 
     def delete(self, matricula):
         try:
-            return MongoConnect.connectionAlunos().delete_one({"matricula": matricula})
+            return MongoConnect().connectionAlunos().delete_one({"matricula": matricula})
         except Exception as e:
             print("--------//------")
             print(e)

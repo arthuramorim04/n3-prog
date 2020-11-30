@@ -19,7 +19,7 @@ def createUser():
 
 @app.route('/delete', methods=['DELETE'])
 def deleteUser():
-    return routes.create(request)
+    return routes.remove(request)
 
 @app.route('/findOne', methods=['GET'])
 def findOne():
