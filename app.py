@@ -11,6 +11,20 @@ def hello_world():
     return 'Hello World!'
 
 
+# Modelo do JSON
+# Create
+# {
+#     "matricula": 5,
+# 	  "nome": "teste123",
+#     "email": "teste123@gmail.com",
+#     "turma" : "ADS41",
+#     "dataMatricula": "10/02/2020"
+# }
+#
+# FindOne e Delete
+# {
+#     "matricula": 2
+# }
 @app.route('/create', methods=['POST'])
 def createUser():
     response = routes.create(request)
@@ -21,15 +35,18 @@ def createUser():
 def deleteUser():
     return routes.remove(request)
 
+
 @app.route('/findOne', methods=['GET'])
 def findOne():
     response = routes.findOne(request)
     return response
 
+
 @app.route('/findAll', methods=['GET'])
 def findAll():
     response = routes.findAll()
     return response
+
 
 if __name__ == '__main__':
     app.run()
